@@ -13,7 +13,7 @@ const initialValue = Value.fromJSON({
             object: 'text',
             leaves: [
               {
-                text: 'A line of text in a paragraph.',
+                text: 'A line of text in a paragraph. dingus',
               },
             ],
           },
@@ -36,7 +36,9 @@ class HelloWorld extends Component {
   }
 
   render() {
-    return <Editor value={this.state.value} onChange={this.onChange} />
+    return <div>
+      <Editor value={this.state.value} onChange={this.onChange.bind(this)} />
+    </div>
   }
 }
 
